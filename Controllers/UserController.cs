@@ -15,6 +15,8 @@ namespace ApprooviaApi.Controller
         {
             _userService = userService;
         }
+        // I created the controller route that will trigger the PostUser to the database. 
+        // Once a user goes to https://localhost:5001/User it will trigger the service to do the POST request 
         [HttpPost]
         public ActionResult<User> PostUser(User user) => _userService.PostUser(user);
     }
